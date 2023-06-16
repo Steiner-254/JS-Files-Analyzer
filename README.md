@@ -16,7 +16,7 @@ To run the script, you need to have the following:
 
 1. Clone or download the script to your local machine.
 
-2. Create a text file named `jsfiles.txt` in the same directory as the script.
+2. Create a text file named `jsfiles.txt` with the JS File URLs in the same directory as the script.
 
 3. Populate `jsfiles.txt` with the URLs of the JS endpoints you want to search, each URL on a new line.
 
