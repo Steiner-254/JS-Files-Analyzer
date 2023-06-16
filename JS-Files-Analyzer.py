@@ -33,13 +33,14 @@ for endpoint in js_endpoints:
         response = ''
     
     # Search for keywords in the response
-    matches = re.findall(keyword_pattern, response, re.IGNORECASE)
+    matches = re.findall(rf"({keyword_pattern})\s*[^=\s\"]\s*\"([^\"]*)\"", response, re.IGNORECASE)
     
     # If matches are found, print them in green color
     if matches:
         print_in_red(f"Found matches in {endpoint}:")
         for match in matches:
-            print_in_green(match)
+            keyword, content = match
+            print_in_green(f"{keyword} = \"{content}\"")
         print()
 
 # Print the completion message in red
